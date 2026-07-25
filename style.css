@@ -1,0 +1,538 @@
+/* ===========================
+   RESET
+=========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #090909;
+    color: white;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+#hero {
+
+    position: relative;
+
+    width: 100%;
+    height: 55vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+#heroImage {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transform: scale(1.08);
+
+    filter: blur(14px);
+
+}
+
+#heroOverlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .45);
+
+    backdrop-filter: blur(6px);
+
+}
+
+#heroContent {
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+}
+
+#heroContent h1 {
+
+    font-size: 72px;
+
+    font-weight: 800;
+
+    letter-spacing: 6px;
+
+}
+
+#heroContent p {
+
+    margin-top: 12px;
+
+    letter-spacing: 4px;
+
+    opacity: .75;
+
+    font-size: 15px;
+
+}
+
+.heroButton {
+
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 15px 36px;
+
+    color: white;
+
+    text-decoration: none;
+
+    border: 1px solid rgba(255,255,255,.5);
+
+    transition: .25s;
+
+}
+
+.heroButton:hover {
+
+    background: white;
+
+    color: black;
+
+}
+
+/* ===========================
+   MAIN
+=========================== */
+
+main {
+
+    width: 100%;
+
+    padding: 120px 10%;
+
+}
+
+/* ===========================
+   ÚLTIMO LANZAMIENTO
+=========================== */
+
+#latestRelease {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 70px;
+
+}
+
+.releaseCover img {
+
+    width: 360px;
+
+    border-radius: 14px;
+
+    display: block;
+
+    transition: .3s;
+
+    cursor: pointer;
+
+}
+
+.releaseCover img:hover {
+
+    transform: scale(1.03);
+
+}
+
+.releaseCover img.playing{
+
+    transform: scale(1.03);
+
+    box-shadow: 0 0 35px rgba(255,255,255,.15);
+
+}
+
+.releaseInfo {
+
+    max-width: 550px;
+
+}
+
+.sectionTitle {
+
+    color: #888;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+}
+
+.releaseInfo h2 {
+
+    font-size: 52px;
+
+    margin-top: 12px;
+
+}
+
+.releaseInfo p {
+
+    margin-top: 22px;
+
+    color: #b5b5b5;
+
+    line-height: 1.8;
+
+}
+
+/* ===========================
+   BARRA DE PROGRESO
+=========================== */
+
+.progressBar{
+
+    width:100%;
+
+    height:6px;
+
+    margin-top:32px;
+    margin-bottom:32px;
+
+    background:rgba(255,255,255,.08);
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+}
+
+#progress{
+
+    width:0%;
+
+    height:100%;
+
+    background:white;
+
+    border-radius:999px;
+
+    transition:width .05s linear;
+
+}
+
+/* ===========================
+   BOTONES
+=========================== */
+
+.releaseButtons {
+
+    display: flex;
+
+    gap: 18px;
+
+    margin-top: 40px;
+
+}
+
+#previewButton,
+.spotifyButton {
+
+    padding: 14px 30px;
+
+    border-radius: 8px;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+#previewButton {
+
+    background: white;
+
+    color: black;
+
+    border: none;
+
+}
+
+#previewButton:hover {
+
+    transform: translateY(-2px);
+
+}
+
+.spotifyButton {
+
+    text-decoration: none;
+
+    color: white;
+
+    border: 1px solid rgba(255,255,255,.3);
+
+}
+
+.spotifyButton:hover {
+
+    background: #1DB954;
+
+    border-color: #1DB954;
+
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+
+#about{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:80px;
+
+    margin-top:180px;
+
+}
+
+.aboutImage{
+
+    flex-shrink:0;
+
+}
+
+.aboutImage img{
+
+    width:340px;
+
+    border-radius:16px;
+
+    display:block;
+
+    transition:.35s;
+
+    cursor:default;
+
+}
+
+.aboutImage img:hover{
+
+    transform:scale(1.02);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+}
+
+.aboutContent{
+
+    max-width:650px;
+
+}
+
+.aboutContent h2{
+
+    font-size:48px;
+
+    margin-top:12px;
+
+    margin-bottom:24px;
+
+}
+
+.aboutContent p{
+
+    color:#b8b8b8;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+}
+
+/* ===========================
+   FOLLOW
+=========================== */
+
+#follow{
+
+    margin-top:180px;
+
+    text-align:center;
+
+}
+
+#follow h2{
+
+    font-size:48px;
+
+    margin-top:12px;
+
+    margin-bottom:60px;
+
+}
+
+.socialGrid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:24px;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.socialCard{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:35px;
+
+    text-align:left;
+
+    transition:.25s;
+
+}
+
+.socialCard:hover{
+
+    transform:translateY(-6px);
+
+    border-color:rgba(255,255,255,.25);
+
+    background:#181818;
+
+}
+
+.socialCard h3{
+
+    font-size:28px;
+
+    margin-bottom:12px;
+
+}
+
+.socialCard p{
+
+    color:#9c9c9c;
+
+    line-height:1.7;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+
+    #heroContent h1 {
+
+        font-size: 46px;
+
+    }
+
+    #latestRelease {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+    .releaseButtons {
+
+        justify-content: center;
+
+    }
+
+    .releaseCover img {
+
+        width: 280px;
+
+    }
+
+        .socialGrid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #follow h2{
+
+        font-size:38px;
+
+    }
+
+}
+
+    #about{
+
+        flex-direction:column;
+
+        text-align:center;
+
+        gap:40px;
+
+        margin-top:120px;
+
+    }
+
+    .aboutImage img{
+
+        width:260px;
+
+    }
+
+    .aboutContent h2{
+
+        font-size:38px;
+
+    }
